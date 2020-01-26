@@ -4,7 +4,6 @@ import sys
 import time
 import queue
 import random
-import argparse
 import threading
 import dns.resolver
 #采用dns子域名爆破的方式，可自行更换指定字典
