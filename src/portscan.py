@@ -20,12 +20,12 @@ class portscan(object):
         sock.settimeout(10)
         result = sock.connect_ex((self.domain, port))
         if result == 0:
-            lock.acquire()#获得锁
+            #lock.acquire()#获得锁
             self.port.put(port)
-        try:
-            lock.release()#释放锁
-        except:
-            pass
+        #try:
+            #lock.release()#释放锁
+        #except:
+            #pass
         sock.close()
 
 

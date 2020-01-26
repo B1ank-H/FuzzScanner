@@ -3,7 +3,7 @@ import re
 import sys
 import time
 import requests
-from poc import *  # waf指纹
+from src.poc import *  # waf指纹
 from multiprocessing import Pool
 
 
