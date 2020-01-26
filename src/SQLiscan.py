@@ -5,11 +5,7 @@ import difflib
 import requests
 from multiprocessing import Pool
 
-'''
-支持参数输入，示例：python SQL.py http://111.198.29.45:43529/?inject=1
-注意：请自行发现注入点或用awvs扫描注入点
-只写了布尔注入和时间注入检测
-'''
+
 class sqlmap(object):
 
     def __init__(self,url):

@@ -8,10 +8,6 @@ import threading
 import linecache
 from socket import *
 
-'''
-通过多线程提高速度
-支持参数输入，示例 python port.py www.baidu.com
-'''
 
 class portscan(object):
 

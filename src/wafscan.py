@@ -6,11 +6,7 @@ import requests
 from poc import *  # waf指纹
 from multiprocessing import Pool
 
-'''
-支持参数输入，示例：python wafscan.py www.qq.com
-poc取自sqlmap,恶意网址取自wafw00f
 
-'''
 class wafscan(object):
 
     def __init__(self,url):

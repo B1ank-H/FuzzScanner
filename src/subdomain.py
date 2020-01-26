@@ -6,18 +6,7 @@ import queue
 import random
 import threading
 import dns.resolver
-#采用dns子域名爆破的方式，可自行更换指定字典
-#注意：过大的字典会使电脑卡机
-#由于dns和字典的原因，每次查询结果可能会不同
 
-'''
-通过多线程提高速度
-支持参数输入，示例：python subdomain.py -f domain.csv -d qq.com -t 2 -o a.txt
-若未指定输出文件，本程序会自动在本目录生成subdomain.txt存放子域名.
-若未指定字典文件，本程序会自动搜寻本目录下的domain.csv.
-若未指定超时时间，本程序自动设置一秒
-其他内容请 python subdomain.py -h
-'''
 
 dnsservers = [
     '119.29.29.29', '182.254.116.116',
@@ -30,9 +19,9 @@ dnsservers = [
 
 class domainFuzzer(object):  # 爆破枚举
 
-    def __init__(self,target,domainflie,outfile,time):
+    def __init__(self,target,outfile,time):
         self.target = target
-        self.file = domainflie
+        self.file = 'domain.csv'
         self.outfile = outfile
         self.time = int(time)
 

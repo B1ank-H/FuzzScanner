@@ -4,10 +4,6 @@ import threading
 from scapy.all import *
 from multiprocessing import Pool
 
-'''
-支持icmp/svn/ack探测
-支持参数输入，示例：python alivescan.py -d www.qq.com 
-'''
 
 class alivescan(object):
 

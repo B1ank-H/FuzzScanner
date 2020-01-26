@@ -6,22 +6,15 @@ import threading
 from multiprocessing import Pool
 
 
-'''
-通过多进程提高速度
-支持参数输入，示例：python IDscan.py http://web.jarvisoj.com:32798/
-支持探测git/svn,bak,swp等备份文件泄漏
-若php文件名未在php-name.csv，请手动添加您找到的php文件名到php-name.csv
-'''
-
 header = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
 dict_name = ['svn', 'git']
 dict_target = {'svn': '.svn/entries', 'git': '.git/config'}
 
 class IDFuzzer(object):
 
-	def __init__(self,domain,UA):
+	def __init__(self,domain):
 		self.domain = domain
-		self.UA = {'User-Agent': UA}
+		self.UA = {'User-Agent': header}
 
 	def run(self):#判断是否有http://，设置进程池
 		self.check()
