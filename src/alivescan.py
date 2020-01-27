@@ -3,7 +3,7 @@ import sys
 import threading
 from scapy.all import *
 from multiprocessing import Pool
-
+from src.colour import Red,Green
 
 class alivescan(object):
 
@@ -23,11 +23,11 @@ class alivescan(object):
         for res in results:
             if res.get() == 'YES':
                 self.flag = False
-                print(self.url + ' online')
+                Green(self.url + ' online')
                 sys.stdout.flush()
                 break
         if self.flag:
-            print(self.url + ' offline')
+            Red(self.url + ' offline')
             sys.stdout.flush()
 
 

@@ -4,7 +4,7 @@ import queue
 import requests
 import threading
 from multiprocessing import Pool
-
+from src.colour import Red,Green
 
 header = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
 dict_name = ['svn', 'git']
@@ -47,7 +47,7 @@ class IDFuzzer(object):
 				try:
 					request = requests.get(url=target, headers=self.UA, timeout=5)
 					if self.judge(name,request):
-						print('[!]' + target )
+						Green('[!]' + target + '\n')
 					else:
 						pass
 				except:

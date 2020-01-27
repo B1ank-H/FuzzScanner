@@ -7,7 +7,7 @@ import queue
 import threading
 import linecache
 from socket import *
-
+from src.colour import Red,Green
 
 class portscan(object):
 
@@ -20,14 +20,8 @@ class portscan(object):
         sock.settimeout(10)
         result = sock.connect_ex((self.domain, port))
         if result == 0:
-            #lock.acquire()#获得锁
             self.port.put(port)
-        #try:
-            #lock.release()#释放锁
-        #except:
-            #pass
         sock.close()
-
 
     def search_cell(self):
         while  not self.port.empty():
@@ -37,7 +31,9 @@ class portscan(object):
                 for i, b in enumerate(reader):
                     if str(data) in b:
                         dates = linecache.getline('service-port.csv', i + 1) #读取csv指定行内容
-                        print (dates.strip())
+                        port, name, service = dates.strip().split(",", 2)
+                        print('{:5s}{:^18s}'.format(port, service))
+                        #print (port + '      ' + '%15s' % service)
                         break
         file.close()
 

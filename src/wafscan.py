@@ -5,6 +5,7 @@ import time
 import requests
 from src.poc import *  # waf指纹
 from multiprocessing import Pool
+from src.colour import Red,Green
 
 
 class wafscan(object):
@@ -22,14 +23,14 @@ class wafscan(object):
         if not self.url.endswith('/'):
             self.url = self.url + "/"
         if self.scan():
-            print('[!]' + self.url + ' The waf name: ' + self.name)
+            Green('[!]' + self.url + ' The waf name: ' + self.name + '\n')
             sys.stdout.flush()
         elif self.attack():
             print('The site ' + self.url + ' seems to be behind a WAF or some sort of security solution')
             print('Reason: The server returned a different response code when a string trigged the blacklist.')
             print('Normal response code is "' + str(self.normal_code) + '", while the response code to an attack is "' + str(self.attack_code) +'"')
         else:
-            print('[x]' + self.url + ' Don\'t find the waf')
+            Red('[x]' + self.url + ' Don\'t find the waf\n')
             sys.stdout.flush()
 
 

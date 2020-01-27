@@ -4,7 +4,7 @@ import time
 import difflib
 import requests
 from multiprocessing import Pool
-
+from src.colour import Red,Green
 
 class sqlmap(object):
 
@@ -23,19 +23,19 @@ class sqlmap(object):
             for res in results:
                 if res.get() == 'YES':
                     self.flag = False
-                    print('SQL injection is possible')
+                    Green('SQL injection is possible\n')
                     sys.stdout.flush()
                     break
                 if res.get() == 'NULL':
                     self.flag = False
-                    print('The host is unreachable')
+                    Red('The host is unreachable\n')
                     sys.stdout.flush()
                     break
             if self.flag:
-                print('SQL injection is impossible')
+                Red('SQL injection is impossible\n')
                 sys.stdout.flush()
         else:
-            print ('Injection point wasn\'t found')
+            Red('Injection point wasn\'t found\n')
 
 
     def check(self):
