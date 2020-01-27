@@ -25,4 +25,29 @@ optional arguments:
   -t , --time       subdomains timeout setting
   -o , --out        subdomains result file
 ```
+## Example
+#### Subdomain scan
+```
+FuzzScanner.py -sd -d qq.com -o result.txt
+```
+#### Open port scan
+```
+FuzzScanner.py -p -d www.qq.com
+```
+#### Alive detect
+```
+FuzzScanner.py -a -d 202.202.43.125
+```
+#### Waf detect 
+```
+FuzzScanner.py -w -d www.qq.com
+```
+#### Sql inject detect 
+```
+FuzzScanner.py -s -d http://111.198.29.45:43529/?inject=1
+```
+#### Information disclosure detect
+```
+FuzzScanner.py -i -d http://web.jarvisoj.com:32798/
+```
 
