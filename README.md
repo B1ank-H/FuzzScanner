@@ -1,6 +1,9 @@
 # FuzzScanner
 ## Introduction
 This is an integrated package.
+
+ If it has any program error,you can send email 1398980516@qq.com to me. 
+
 ## Function
 - Subdomain scan
 - Open port scan
