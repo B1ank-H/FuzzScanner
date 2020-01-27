@@ -44,14 +44,9 @@ class IDFuzzer(object):
 		try:
 			r = requests.head(url=target,headers=self.UA,timeout=5)
 			if r.status_code == 200:
-				try:
 					request = requests.get(url=target, headers=self.UA, timeout=5)
 					if self.judge(name,request):
 						Green('[!]' + target + '\n')
-					else:
-						pass
-				except:
-					pass
 			else:
 				pass
 		except:
@@ -67,7 +62,7 @@ class IDFuzzer(object):
 						input.put('.php'.join([str(line0.strip()), str(line1.strip())]))
 		while not input.empty():
 			sub = input.get_nowait()
-			t = threading.Thread(target=(self.scan_base), args=(sub, self.domain+sub))
+			t = threading.Thread(target=(self.scan), args=(sub, self.domain+sub))
 			threads.append(t)
 			t.start()
 		for t in threads:

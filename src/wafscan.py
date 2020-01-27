@@ -22,6 +22,7 @@ class wafscan(object):
             self.url = 'http://' + self.url
         if not self.url.endswith('/'):
             self.url = self.url + "/"
+        print ('Checking: ' + self.url)
         if self.scan():
             Green('[!]' + self.url + ' The waf name: ' + self.name + '\n')
             sys.stdout.flush()
