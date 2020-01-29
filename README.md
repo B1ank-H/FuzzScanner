@@ -28,7 +28,7 @@ optional arguments:
   -t , --time       subdomains timeout setting
   -o , --out        subdomains result file
 ```
-## Details&Node
+## Details&Nodes
 #### Subdomain scan
 ```
 FuzzScanner.py -sd -d qq.com -o result.txt
