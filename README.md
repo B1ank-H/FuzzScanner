@@ -2,7 +2,7 @@
 ## Introduction
 This is an integrated package.
 
- If it has any program error,you can send email： MTM5ODk4MDUxNkBxcS5jb20=  to me. 
+ If it has any program error,you can send email: MTM5ODk4MDUxNkBxcS5jb20=  to me. 
 
 ## Function
 - Subdomain scan
