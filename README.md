@@ -1,8 +1,10 @@
 # FuzzScanner
 ## Introduction
-This is an integrated package.
+[![PyPI version](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/)  [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://raw.githubusercontent.com/sqlmapproject/sqlmap/master/LICENSE) 
 
- If it has any program error,you can send email: MTM5ODk4MDUxNkBxcS5jb20=  to me. 
+ If you find any program error,you can send email: MTM5ODk4MDUxNkBxcS5jb20=  to me. 
+
+**Welcome star** 
 
 ## Function
 - Subdomain scan
