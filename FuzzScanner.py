@@ -18,8 +18,7 @@ u'''
     
       version  -3.2     
 —————————————                      
-'''
-+ 'Waiting:\n')
+''' + 'Waiting:\n')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

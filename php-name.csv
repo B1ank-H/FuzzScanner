@@ -4,6 +4,5 @@ config
 flag
 index
 phpinfo
-webadmin
 conf
 backup

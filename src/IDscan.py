@@ -59,7 +59,7 @@ class IDFuzzer(object):
 		else:
 			return True
 
-	def scan(self,name,target,flag): # 探测git/svn文件泄漏
+	def scan(self,name,target,flag): #探测git/svn文件泄漏
 		try:
 			r = requests.head(url=target,headers=self.UA,timeout=5)
 			if r.status_code == 200:
