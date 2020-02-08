@@ -9,12 +9,10 @@ import dns.resolver
 
 
 dnsservers = [
-    '119.29.29.29', '182.254.116.116',
-    '8.8.8.8', '8.8.4.4',
-    '180.76.76.76',
-    '1.2.4.8', '210.2.4.8',
-    '101.226.4.6', '218.30.118.6',
-    '8.26.56.26', '8.20.247.20'
+    '119.29.29.29', '182.254.116.116', #腾讯DNS
+    '223.5.5.5', '223.6.6.6', #阿里DNS
+    '101.226.4.6'
+
 ]
 
 class domainFuzzer(object):  # 爆破枚举
@@ -38,9 +36,15 @@ class domainFuzzer(object):  # 爆破枚举
                 output.put(sub)
                 sys.stdout.flush()
         except dns.resolver.NoAnswer:
-            pass
+            if not flag:
+                self.dnssearch(sub, output, flag=1)  # 更改dns再次尝试
+            else:
+                pass
         except dns.resolver.NXDOMAIN:
-            pass
+            if not flag:
+                self.dnssearch(sub, output, flag=1)  # 更改dns再次尝试
+            else:
+                pass
         except dns.resolver.Timeout :
             if not flag:
                 self.dnssearch(sub,output,flag=1) # 更改dns再次尝试

@@ -23,19 +23,19 @@ class sqlmap(object):
             for res in results:
                 if res.get() == 'YES':
                     self.flag = False
-                    Green('SQL injection is possible\n')
+                    Green('[!]SQL injection is possible\n')
                     sys.stdout.flush()
                     break
                 if res.get() == 'NULL':
                     self.flag = False
-                    Red('The host is unreachable\n')
+                    Red('[x]The host is unreachable\n')
                     sys.stdout.flush()
                     break
             if self.flag:
-                Red('SQL injection is impossible\n')
+                Red('[x]SQL injection is impossible\n')
                 sys.stdout.flush()
         else:
-            Red('Injection point wasn\'t found\n')
+            Red('[x]Injection point wasn\'t found\n')
 
 
     def check(self):
