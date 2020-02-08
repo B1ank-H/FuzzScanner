@@ -19,7 +19,7 @@ u'''
       version  -3.2     
 —————————————                      
 '''
-)
++ 'Waiting:\n')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -40,11 +40,9 @@ if __name__ == '__main__':
         exit()
     else:
         if args.subdomain:
-            print ('Waiting:\n')
             sub = domainFuzzer(args.domain,args.out,args.time)
             sub.run()
         if args.alive:
-            print ('Waiting:\n')
             alive = alivescan(args.domain)
             alive.run()
         if args.port:
@@ -55,11 +53,9 @@ if __name__ == '__main__':
             waf = wafscan(args.domain)
             waf.run()
         if args.id:
-            print ('Waiting:\n')
             id = IDFuzzer(args.domain)
             id.run()
         if args.sql:
-            print ('Waiting:\n')
             sql = sqlmap(args.domain)
             sql.run()
         end = time.time()
