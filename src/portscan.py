@@ -33,7 +33,6 @@ class portscan(object):
                         dates = linecache.getline('service-port.csv', i + 1) #读取csv指定行内容
                         port, name, service = dates.strip().split(",", 2)
                         print('{:5s}{:^18s}'.format(port, service))
-                        #print (port + '      ' + '%15s' % service)
                         break
         file.close()
 
