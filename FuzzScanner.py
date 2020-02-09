@@ -5,9 +5,9 @@ import argparse
 from src.IDscan import IDFuzzer
 from src.wafscan import wafscan
 from src.SQLiscan import sqlmap
-from src.colour import Red
 from src.portscan import portscan
 from src.alivescan import alivescan
+from src.colour import Red,resetColor
 from src.subdomain import domainFuzzer
 
 def show():
@@ -32,6 +32,7 @@ if __name__ == '__main__':
     parser.add_argument("-t", "--time",metavar='', default=1, help="subdomains timeout setting")
     parser.add_argument("-o", "--out",metavar='', default="subdomain.txt", help="subdomains result file")
     args = parser.parse_args()
+    resetColor()
     show()
     start = time.time()
     if not args.domain:

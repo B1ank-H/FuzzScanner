@@ -23,7 +23,7 @@ class alivescan(object):
         for res in results:
             if res.get() == 'YES':
                 self.flag = False
-                Green(+self.url + ' online\n')
+                Green(self.url + ' online\n')
                 sys.stdout.flush()
                 break
         if self.flag:

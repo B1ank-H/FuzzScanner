@@ -36,15 +36,9 @@ class domainFuzzer(object):  # 爆破枚举
                 output.put(sub)
                 sys.stdout.flush()
         except dns.resolver.NoAnswer:
-            if not flag:
-                self.dnssearch(sub, output, flag=1)  # 更改dns再次尝试
-            else:
-                pass
+            pass
         except dns.resolver.NXDOMAIN:
-            if not flag:
-                self.dnssearch(sub, output, flag=1)  # 更改dns再次尝试
-            else:
-                pass
+            pass
         except dns.resolver.Timeout :
             if not flag:
                 self.dnssearch(sub,output,flag=1) # 更改dns再次尝试
