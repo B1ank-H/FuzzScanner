@@ -52,11 +52,11 @@ class domainFuzzer(object):  # 爆破枚举
         with open(self.file, "r") as csvfile:
             for line in csvfile.readlines():
                 input.put('.'.join([str(line.strip()), str(self.target)]))
-                while not input.empty():
-                    sub = input.get_nowait()
-                    t = threading.Thread(target=(self.dnssearch), args=(sub,output))
-                    threads.append(t)
-                    t.start()
+        while not input.empty():
+            sub = input.get_nowait()
+            t = threading.Thread(target=(self.dnssearch), args=(sub,output))
+            threads.append(t)
+            t.start()
         csvfile.close()
         for t in threads:
             t.join(self.time)
