@@ -46,7 +46,7 @@ FuzzScanner.py -sd -d qq.com -o result.txt
 
 如果未指定字典文件，则该程序将在此目录中自动搜索domain.csv。
 
-注意：当心过多的卡片字典
+注意：当心过大字典导致卡机
 
 如果未指定超时，程序将自动设置一秒钟
 
