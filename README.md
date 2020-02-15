@@ -1,4 +1,4 @@
-[中文介绍](https://github.com/Yuanlin-He/HYLScanner/blob/master/README-zh.md)
+# [中文介绍](https://github.com/Yuanlin-He/HYLScanner/blob/master/README-zh.md)
 
 # FuzzScanner
 
