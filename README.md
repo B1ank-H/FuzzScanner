@@ -1,4 +1,7 @@
+[中文介绍](https://github.com/Yuanlin-He/HYLScanner/blob/master/README-zh.md)
+
 # FuzzScanner
+
 ## Introduction
 [![PyPI version](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/)  [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://raw.githubusercontent.com/sqlmapproject/sqlmap/master/LICENSE) 
 
@@ -62,7 +65,7 @@ poc.py is the waf fingerprint library
 Comparing ordinary URL status codes with malicious request status codes to detect if their waf is anti-scanning
 #### Sql inject detect 
 ```
-FuzzScanner.py -s -d http://111.198.29.45:43529/?inject=1
+FuzzScanner.py -s -d http://43.247.91.228:84/Less-1/?id=1
 ```
 Note: 
 **Please find the injection point by yourself or scan the injection point with awvs**
