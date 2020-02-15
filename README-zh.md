@@ -2,7 +2,8 @@
 
 ##  介绍
 [![PyPI version](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/)  [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://raw.githubusercontent.com/sqlmapproject/sqlmap/master/LICENSE) 
- 如果发现任何程序错误，可以向我发送电子邮件 MTM5ODk4MDUxNkBxcS5jb20=  。
+
+如果发现任何程序错误，可以向我发送电子邮件 MTM5ODk4MDUxNkBxcS5jb20=  。
 
 ## 功能
 
