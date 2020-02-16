@@ -16,10 +16,10 @@
 
 ## 用法
 
-使用`FuzzScanner.py -h`查看帮助
+使用`python FuzzScanner.py -h`查看帮助
 
 ```
-用法：FuzzScanner.py [-h] [-d] [-a] [-s] [-p] [-w] [-sd] [-i] [-t] [-o]
+用法：python FuzzScanner.py [-h] [-d] [-a] [-s] [-p] [-w] [-sd] [-i] [-t] [-o]
 
 可选参数：
   -h, --help        show this help message and exit
@@ -39,7 +39,7 @@
 #### 子域扫描
 
 ```
-FuzzScanner.py -sd -d qq.com -o result.txt
+python FuzzScanner.py -sd -d qq.com -o result.txt
 ```
 
 如果未指定输出文件，则程序将在此目录中自动生成subdomain.txt以存储子域名。
@@ -53,13 +53,13 @@ FuzzScanner.py -sd -d qq.com -o result.txt
 #### 端口扫描
 
 ```
-FuzzScanner.py -p -d www.qq.com
+python FuzzScanner.py -p -d www.qq.com
 ```
 
 #### 存活检测
 
 ```
-FuzzScanner.py -a -d 202.202.43.125
+python FuzzScanner.py -a -d 202.202.43.125
 ```
 
 支持ICMP / SYN / ACK扫描
@@ -67,7 +67,7 @@ FuzzScanner.py -a -d 202.202.43.125
 #### Waf检测
 
 ```
-FuzzScanner.py -w -d www.qq.com
+python FuzzScanner.py -w -d www.qq.com
 ```
 
 poc.py是waf指纹库
@@ -77,7 +77,7 @@ poc.py是waf指纹库
 #### SQL注入检测
 
 ```
-FuzzScanner.py -s -d http://43.247.91.228:84/Less-1/?id=1
+python FuzzScanner.py -s -d http://43.247.91.228:84/Less-1/?id=1
 ```
 
 注意：**请自行找到注入点或使用awvs扫描注入点**
@@ -85,7 +85,7 @@ FuzzScanner.py -s -d http://43.247.91.228:84/Less-1/?id=1
 #### 信息泄露检测
 
 ```
-FuzzScanner.py -i -d http://web.jarvisoj.com:32798/
+python FuzzScanner.py -i -d http://web.jarvisoj.com:32798/
 ```
 
 支持检测git / svn，bak，swp和其他备份文件泄漏
